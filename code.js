@@ -1,0 +1,1 @@
+setInterval(function() {var ws = Game.wrinklers.filter(item => item.sucked !== 0); var fattest = { amnt: 0, id: 0 }; if (ws.length > 10) { for (i = 0; i < ws.length; i++) { if (ws[i].type == 0){ if (ws[i].sucked > fattest.amnt){ fattest.amnt = ws[i].sucked; fattest.id = ws[i].id; } } } } if (fattest.amnt>1) { Game.wrinklers[fattest.id].hp = -1; }}, 1000);
